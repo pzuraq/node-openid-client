@@ -388,7 +388,7 @@ describe('DPoP', () => {
         DPoP: privateKey,
       })
       .then((response) => {
-        expect(response.statusCode).to.eql(400);
+        expect(response.status).to.eql(400);
       });
   });
 
