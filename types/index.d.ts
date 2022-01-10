@@ -560,7 +560,7 @@ export namespace generators {
   function state(bytes?: number): string;
   function nonce(bytes?: number): string;
   function codeVerifier(bytes?: number): string;
-  function codeChallenge(verifier: string): string;
+  function codeChallenge(verifier: string): Promise<string>;
 }
 
 export namespace errors {
