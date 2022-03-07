@@ -25,14 +25,6 @@ const { queryKeyStore } = require('./helpers/issuer');
 const DeviceFlowHandle = require('./device_flow_handle');
 
 let rsaPssParams = false;
-if (typeof process !== 'undefined') {
-  const [major, minor] = process.version
-    .slice(1)
-    .split('.')
-    .map((str) => parseInt(str, 10));
-
-  rsaPssParams = major >= 17 || (major === 16 && minor >= 9);
-}
 const retryAttempt = Symbol();
 
 const pickCbFields = [
